@@ -7,39 +7,47 @@
     <button type="submit" class="btn btn-primary" id="btnOrderBurger">Order Up!</button>
 </form>
 <br>
-<div class="row">
+<div class="row" >
     <div class="col-6">
-        <h3>Orders</h3>
-        <hr>
-        
-        {{#each burgers}}
-        {{#unless devoured}}
-        <div class="card" style="width: 18rem;">
+        <div class="card">
+            <h5 class="card-header text-center">Orders</h5>
             <div class="card-body">
-                <h5 class="card-title">#{{this.id}}: {{this.burger_name}}</h5>
-                <p class="card-text">Your burger is ready to eat!</p>
-                <button class="btnDevour btn btn-warning" data-id="{{this.id}}"
-                    data-newDevoured="{{devour}}">Devour</button>
+                {{#each burgers}}
+                {{#unless devoured}}
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">#{{this.id}}: {{this.burger_name}}</h5>
+                        <p class="card-text">Your burger is ready to eat!</p>
+                        <button type="button" class="devourBurger btn btn-warning devour-button" id="btnDevour" data-id="{{this.id}}"
+                            data-newDevoured="{{devour}}">Devour it!</button>
+                                 {{!-- <button type="button" class="eatburger btn btn-warning" id="eatbutton" data-id="{{this.id}}"
+                            data-newDevoured="{{devour}}"><span class="fa fa-usd"></span></button> --}}
+                    </div>
+                </div>
+                <hr>
+                {{/unless}}
+                {{/each}}
             </div>
         </div>
-        <hr>
-        {{/unless}}
-        {{/each}}
     </div>
     <div class="col-6">
-        <h3>Devoured</h3>
-        <hr>
-        {{#each burgers}}
-        {{#if devoured}}
-        <div class="card" style="width: 18rem;">
+        <div class="card">
+            <h5 class="card-header text-center">Devoured</h5>
             <div class="card-body">
-                <h5 class="card-title">#{{this.id}}: {{this.burger_name}}</h5>
-                <p class="card-text">That was delicous!</p>
-                {{!-- <a href="#" class="btn btn-primary">Go somewhere</a> --}}
+                {{#each burgers}}
+                {{#if devoured}}
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">#{{this.id}}: {{this.burger_name}}</h5>
+                        <p class="card-text">That was delicous!</p>
+                        {{!-- <a href="#" class="btn btn-primary">Go somewhere</a> --}}
+                    </div>
+                </div>
+                <hr>
+                {{/if}}
+                {{/each}}
             </div>
         </div>
-        <hr>
-        {{/if}}
-        {{/each}}
+
     </div>
 </div>
