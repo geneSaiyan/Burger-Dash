@@ -19,9 +19,7 @@
                         <h5 class="card-title">#{{this.id}}: {{this.burger_name}}</h5>
                         <p class="card-text">Your burger is ready to eat!</p>
                         <button type="button" class="devourBurger btn btn-warning devour-button" id="btnDevour" data-id="{{this.id}}"
-                            data-newDevoured="{{devour}}">Devour it!</button>
-                                 {{!-- <button type="button" class="eatburger btn btn-warning" id="eatbutton" data-id="{{this.id}}"
-                            data-newDevoured="{{devour}}"><span class="fa fa-usd"></span></button> --}}
+                            data-newDevoured="{{devour}}">Devour it!</button>              
                     </div>
                 </div>
                 <hr>
@@ -40,7 +38,7 @@
                     <div class="card-body">
                         <h5 class="card-title">#{{this.id}}: {{this.burger_name}}</h5>
                         <p class="card-text">That was delicous!</p>
-                        {{!-- <a href="#" class="btn btn-primary">Go somewhere</a> --}}
+                        <button class="delete-burger btn btn-danger" data-id="{{this.id}}"><i class="fa fa-trash-alt"></i></button>
                     </div>
                 </div>
                 <hr>
