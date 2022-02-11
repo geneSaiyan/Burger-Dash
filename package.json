@@ -18,7 +18,7 @@
   "homepage": "https://github.com/geneSaiyan/Burger-Dash#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "express-handlebars": "^3.1.0",
+    "express-handlebars": "^5.3.1",
     "mysql": "^2.18.1"
   }
 }
